@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <title>Królestwo Czarnodzieja</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +8,9 @@
         <meta name="author" content="">
         {% block stylesheets %}
             {% stylesheets filter='?uglifycss, cssrewrite'
-        '@bootstrap_css'
-        'bundles/czarnodziejcore/css/*'
-        '@fontawesome_css'%}
+            '@bootstrap_css'
+            'bundles/czarnodziejcore/css/*'
+            '@fontawesome_css'%}
             <link rel="stylesheet" href="{{ asset_url }}"/>
             {% endstylesheets %}
         {% endblock %}

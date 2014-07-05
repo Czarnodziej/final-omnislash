@@ -1,0 +1,13 @@
+contact:
+    label:
+        name: "Imię:"
+        email: "Adres e-mail:"
+        subject: "Temat wiadomości:"
+        message: "Treść wiadomości:"
+    placeholder:
+        name: "Imię"
+        email: "Adres e-mail"
+        subject: "Temat"
+        message: "Treść"
+    flash:
+        sent: "Wiadomość została wysłana."

@@ -1,3 +1,7 @@
 czarnodziej_core_homepage:
     path:     /
     defaults: { _controller: CzarnodziejCoreBundle:Default:index }
+
+#czarnodziej_core_contact:
+#    path:     /contact
+#    defaults: { _controller: CzarnodziejCoreBundle:Default:contact }
