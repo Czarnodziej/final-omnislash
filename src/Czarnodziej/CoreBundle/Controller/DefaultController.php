@@ -35,7 +35,7 @@ class DefaultController extends Controller
 
                 $request->getSession()->getFlashBag()->add('success', 'contact.flash.sent');
 
-                return $this->redirect($this->generateUrl('czarnodziej_core_homepage'));
+                return $this->redirect($this->generateUrl('czarnodziej_core_homepage') . '#contact');
             }
         }
 
