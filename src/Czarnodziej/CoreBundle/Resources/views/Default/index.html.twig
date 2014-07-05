@@ -171,9 +171,8 @@
             {% endfor %}
         {% endfor %}
 
-        <form action="{{ path('czarnodziej_core_homepage') }}" method="post">
+        <form action="{{ path('czarnodziej_core_homepage') }}#contact" method="post">
             {{ form_widget(form) }}
-
             <button type="submit">Send</button>
         </form>
 

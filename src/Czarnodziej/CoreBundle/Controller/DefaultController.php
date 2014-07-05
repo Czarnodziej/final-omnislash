@@ -37,11 +37,12 @@ class DefaultController extends Controller
 
                 return $this->redirect($this->generateUrl('czarnodziej_core_homepage') . '#contact');
             }
+
         }
 
         return
                 $this->render('CzarnodziejCoreBundle:Default:index.html.twig', array(
-                    'form' => $form->createView(),)
+                    'form' => $form->createView())
         );
     }
 }
