@@ -4,11 +4,9 @@ namespace Czarnodziej\CoreBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-//use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
-//use Symfony\Component\Validator\Constraints\Collection;
 
 class ContactType extends AbstractType
 {
@@ -23,7 +21,7 @@ class ContactType extends AbstractType
                     ),
                     'constraints' => array(
                         new NotBlank(array('message' => 'contact.name.not_blank')),
-                        new Length(array('min' => 2, 'minMessage'=>'contact.name.min_message')),
+                        new Length(array('min' => 2, 'minMessage' => 'contact.name.min_message')),
                     )
                 ))
                 ->add('email', 'email', array(
@@ -44,7 +42,7 @@ class ContactType extends AbstractType
                     ),
                     'constraints' => array(
                         new NotBlank(array('message' => 'contact.subject.not_blank')),
-                        new Length(array('min' => 3, 'minMessage'=>'contact.subject.min_message'))
+                        new Length(array('min' => 3, 'minMessage' => 'contact.subject.min_message'))
                     )
                 ))
                 ->add('message', 'textarea', array(
@@ -56,7 +54,7 @@ class ContactType extends AbstractType
                     ),
                     'constraints' => array(
                         new NotBlank(array('message' => 'contact.message.not_blank')),
-                        new Length(array('min' => 5, 'minMessage'=>'contact.message.min_message'))
+                        new Length(array('min' => 5, 'minMessage' => 'contact.message.min_message'))
                     )
         ));
     }
