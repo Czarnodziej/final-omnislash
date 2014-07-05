@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Królestwo Czarnodzieja</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        {% block stylesheets %}
+            {% stylesheets filter='?uglifycss, cssrewrite'
+        '@bootstrap_css'
+        'bundles/czarnodziejcore/css/*'
+        '@fontawesome_css'%}
+            <link rel="stylesheet" href="{{ asset_url }}"/>
+            {% endstylesheets %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block body_content %}
+        {% endblock %}
+        {% javascripts filter='?uglifyjs'
+        '@jquery'
+        '@bootstrap_js'
+        '@CzarnodziejCoreBundle/Resources/public/js/*'
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    </body>
+</html>

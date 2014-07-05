@@ -1,0 +1,4 @@
+czarnodziej_core:
+    resource: "@CzarnodziejCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+

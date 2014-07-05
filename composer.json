@@ -24,6 +24,7 @@
         "twbs/bootstrap": "dev-master",
         "twbs/bootstrap-sass": "3.1.*@dev",
         "components/jquery": "1.11.*@dev",
+        "components/angular.js": "dev-master",
         "fortawesome/font-awesome": "4.0.*@dev",
         "white-october/pagerfanta-bundle": "dev-master",
         "ircmaxell/password-compat": "~1.0.3",
@@ -54,7 +55,8 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "component-dir": "web/components"
     },
     "extra": {
         "symfony-app-dir": "app",
