@@ -6,10 +6,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Czarnodziej\CoreBundle\Form\Type\ContactType;
 use Symfony\Component\HttpFoundation\Request;
 
+//use Symfony\Component\Serializer\Serializer;
+//use Sensio\Bundle\Buzz\Browser;
+
 class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
+
+        $buzz = $this->container->get('buzz');
+
+        $response = $buzz->get('http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=pagodemc&api_key=21f90626f951daad7849a2c2dd3607d4&period=7day&limit=3&format=json');
+
+        $tracks = json_decode($response->getContent());
+
+
         $form = $this->createForm(new ContactType());
         if ($request->isMethod('POST'))
         {
@@ -40,9 +51,12 @@ class DefaultController extends Controller
             }
         }
 
+
+
         return
                 $this->render('CzarnodziejCoreBundle:Default:index.html.twig', array(
-                    'form' => $form->createView())
+                    'form'   => $form->createView(),
+                    'tracks' => $tracks)
         );
     }
 }

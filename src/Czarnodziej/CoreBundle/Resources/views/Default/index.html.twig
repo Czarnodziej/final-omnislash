@@ -1,5 +1,6 @@
 {% extends 'CzarnodziejCoreBundle::base.html.twig' %}
 {% block body_content %}
+
     <!-- Side Menu -->
     <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="fa fa-bars"></i></a>
     <div id="sidebar-wrapper">
@@ -157,13 +158,19 @@
     <!-- Call to Action -->
     <div class="call-to-action">
         <div class="container">
+
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <h3>The buttons below are impossible to resist.</h3>
                     <a href="#" class="btn btn-lg btn-default">Click Me!</a>
                     <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+
                 </div>
             </div>
+
+
+
+
         </div>
     </div>
     <!-- /Call to Action -->
@@ -190,9 +197,42 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+
             <div class="row">
+
+
+                <div class="col-md-6 col-md-offset-3">
+
+
+                </div>
+
+
+
+
+
                 <div class="col-md-6 col-md-offset-3 text-center">
-                    <ul class="list-inline">
+                                        <div class="lastfm-top-tracks">
+
+                        <ol>
+                            Ulubione utwory z ostatnich 7 dni:
+                            <li>
+                                <a href="{{tracks.toptracks.track[0].url}}">
+
+                                    <img src="{{ attribute(tracks.toptracks.track[0].image[0], '#text') }}" >
+                                    {{tracks.toptracks.track[0].artist.name}} - {{tracks.toptracks.track[0].name}}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{tracks.toptracks.track[1].url}}">
+                                    <img src="{{ attribute(tracks.toptracks.track[1].image[0], '#text') }}" >
+                                    {{tracks.toptracks.track[1].artist.name}} - {{tracks.toptracks.track[1].name}}</a></li>
+                            <li>
+                                <a href="{{tracks.toptracks.track[2].url}}">
+                                    <img src="{{ attribute(tracks.toptracks.track[2].image[0], '#text') }}" >
+                                    {{tracks.toptracks.track[2].artist.name}} - {{tracks.toptracks.track[2].name}}</a></li>
+                        </ol>
+                    </div>
+                    <ul class="list-inline ">
                         <li><i class="fa fa-facebook fa-3x"></i>
                         </li>
                         <li><i class="fa fa-twitter fa-3x"></i>

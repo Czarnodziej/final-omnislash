@@ -15,6 +15,7 @@
         "symfony/assetic-bundle": "~2.3",
         "symfony/swiftmailer-bundle": "~2.3",
         "symfony/monolog-bundle": "~2.4",
+        "symfony/serializer": "2.6.*@dev",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
@@ -28,7 +29,8 @@
         "fortawesome/font-awesome": "4.0.*@dev",
         "white-october/pagerfanta-bundle": "dev-master",
         "ircmaxell/password-compat": "~1.0.3",
-        "besimple/i18n-routing-bundle": "dev-master"
+        "besimple/i18n-routing-bundle": "dev-master",
+        "sensio/buzz-bundle":"dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
