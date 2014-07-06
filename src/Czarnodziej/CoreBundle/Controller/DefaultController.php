@@ -19,13 +19,14 @@ class DefaultController extends Controller
             {
                 $message = \Swift_Message::newInstance()
                         ->setSubject($form->get('subject')->getData())
-                        ->setFrom($form->get('email')->getData())
+                        ->setFrom('kontakt@insanet.pl')
                         ->setTo('pagodemc@gmail.com')
                         ->setBody(
                         $this->renderView(
                                 'CzarnodziejCoreBundle:Mail:contact.html.twig', array(
                             'ip'      => $request->getClientIp(),
                             'name'    => $form->get('name')->getData(),
+                            'email'   => $form->get('email')->getData(),
                             'message' => $form->get('message')->getData()
                                 )
                         )
@@ -37,7 +38,6 @@ class DefaultController extends Controller
 
                 return $this->redirect($this->generateUrl('czarnodziej_core_homepage') . '#contact');
             }
-
         }
 
         return
