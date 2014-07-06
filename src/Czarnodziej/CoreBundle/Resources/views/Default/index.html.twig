@@ -177,20 +177,23 @@
 
     <!-- Contact Form -->
     <div id="contact">
-
-        {% for label, flashes in app.session.flashbag.all %}
-            {% for flash in flashes %}
-                <div class="alert alert-{{ label }}">
-                    {{ flash|trans }}
-                </div>
+        <div class="container">
+            <div class="col-md-4 col-md-offset-4">
+                <h4>Foermularz kontaktowy</h4>
+            {% for label, flashes in app.session.flashbag.all %}
+                {% for flash in flashes %}
+                    <div class="alert alert-{{ label }}">
+                        {{ flash|trans }}
+                    </div>
+                {% endfor %}
             {% endfor %}
-        {% endfor %}
 
-        <form action="{{ path('czarnodziej_core_homepage') }}#contact" method="post">
-            {{ form_widget(form) }}
-            <button type="submit">Send</button>
-        </form>
-
+            <form action="{{ path('czarnodziej_core_homepage') }}#contact" method="post">
+                {{ form_widget(form) }}
+                <button type="submit">Send</button>
+            </form>
+            </div>
+        </div>
     </div>
     <!-- /Contact Form -->
 
@@ -200,18 +203,8 @@
 
             <div class="row">
 
-
-                <div class="col-md-6 col-md-offset-3">
-
-
-                </div>
-
-
-
-
-
                 <div class="col-md-6 col-md-offset-3 text-center">
-                                        <div class="lastfm-top-tracks">
+                    <div class="lastfm-top-tracks">
 
                         <ol>
                             Ulubione utwory z ostatnich 7 dni:
@@ -244,7 +237,7 @@
                         <a href="#top"><i class="fa fa-arrow-circle-up scroll fa-4x"></i></a>
                     </div>
                     <hr>
-                    <p>Copyright &copy; Company 2013</p>
+                    <p>&copy; Insanet.eu 2014</p>
                 </div>
             </div>
         </div>
