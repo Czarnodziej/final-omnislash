@@ -20,6 +20,8 @@ assetic:
             bin: /home/marcin/npm/lib/node_modules/uglifycss/uglifycss
         jpegoptim:
             bin: /usr/bin/jpegoptim
+            strip_all: true
+            max: 70
         optipng:
             bin: /usr/bin/optipng
 
