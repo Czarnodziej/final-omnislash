@@ -164,13 +164,20 @@ i.service-icon {
 .callout {
   color: #ffffff;
   display: table;
-  height: 400px;
+  height: 220px;
   width: 100%;
   background: url(../img/callout.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding: 50px 0;
+}
+
+.callout h2 {
+    /*color: white;*/
+    background-color: black;
+    opacity: 0.7;
 }
 
 /* Portfolio */
