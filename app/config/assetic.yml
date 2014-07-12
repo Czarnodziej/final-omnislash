@@ -18,6 +18,10 @@ assetic:
         uglifycss:
             #change according to NODE.js/NPM config
             bin: /home/marcin/npm/lib/node_modules/uglifycss/uglifycss
+        jpegoptim:
+            bin: /usr/bin/jpegoptim
+        optipng:
+            bin: /usr/bin/optipng
 
     assets:
         jquery:
