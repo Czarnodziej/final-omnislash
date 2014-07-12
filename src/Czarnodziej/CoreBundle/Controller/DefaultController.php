@@ -16,32 +16,33 @@ class DefaultController extends Controller
 
         $buzz = $this->container->get('buzz');
 
-        $response = $buzz->get('http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=pagodemc&api_key=21f90626f951daad7849a2c2dd3607d4&period=7day&limit=3&format=json');
+        $response = $buzz->get('http://ws.audioscrobbler.com/2.0/?method='
+                . 'user.gettoptracks&user=pagodemc&'
+                . 'api_key=21f90626f951daad7849a2c2dd3607d4&'
+                . 'period=7day&limit=5&format=json');
 
         $tracks = json_decode($response->getContent());
 
 
         $form = $this->createForm(new ContactType());
-        if ($request->isMethod('POST'))
-        {
+        if ($request->isMethod('POST')) {
             $form->bind($request);
 
-            if ($form->isValid())
-            {
+            if ($form->isValid()) {
                 $message = \Swift_Message::newInstance()
-                        ->setSubject($form->get('subject')->getData())
-                        ->setFrom('kontakt@insanet.pl')
-                        ->setTo('pagodemc@gmail.com')
-                        ->setBody(
+                    ->setSubject($form->get('subject')->getData())
+                    ->setFrom('kontakt@insanet.pl')
+                    ->setTo('pagodemc@gmail.com')
+                    ->setBody(
                         $this->renderView(
-                                'CzarnodziejCoreBundle:Mail:contact.html.twig', array(
-                            'ip'      => $request->getClientIp(),
-                            'name'    => $form->get('name')->getData(),
-                            'email'   => $form->get('email')->getData(),
-                            'message' => $form->get('message')->getData()
-                                )
+                            'CzarnodziejCoreBundle:Mail:contact.html.twig', array(
+                                'ip' => $request->getClientIp(),
+                                'name' => $form->get('name')->getData(),
+                                'email' => $form->get('email')->getData(),
+                                'message' => $form->get('message')->getData()
+                            )
                         )
-                );
+                    );
 
                 $this->get('mailer')->send($message);
 
@@ -51,12 +52,10 @@ class DefaultController extends Controller
             }
         }
 
-
-
         return
-                $this->render('CzarnodziejCoreBundle:Default:index.html.twig', array(
-                    'form'   => $form->createView(),
+            $this->render('CzarnodziejCoreBundle:Default:index.html.twig', array(
+                    'form' => $form->createView(),
                     'tracks' => $tracks)
-        );
+            );
     }
 }

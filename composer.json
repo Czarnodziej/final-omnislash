@@ -30,7 +30,8 @@
         "white-october/pagerfanta-bundle": "dev-master",
         "ircmaxell/password-compat": "~1.0.3",
         "besimple/i18n-routing-bundle": "dev-master",
-        "sensio/buzz-bundle":"dev-master"
+        "sensio/buzz-bundle":"dev-master",
+        "mopa/bootstrap-bundle": "3.*@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

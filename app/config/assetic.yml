@@ -20,9 +20,6 @@ assetic:
             bin: /home/marcin/npm/lib/node_modules/uglifycss/uglifycss
 
     assets:
-        jquery_min:
-            inputs:
-                - %kernel.root_dir%/../web/components/jquery/jquery.min.js
         jquery:
             inputs:
                 - %kernel.root_dir%/../web/components/jquery/jquery.js
@@ -38,6 +35,3 @@ assetic:
             filters:
                 - cssrewrite
             output: css/fontawesome.css
-
-
-

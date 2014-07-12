@@ -1,18 +1,19 @@
 main:
-    title: Królestwo Czarnodzieja
+    title: "Szaleńczo dobre kreacje | insanet.pl"
 
 
 
 contact:
     label:
-        name: "Imię:"
-        email: "Adres e-mail:"
+        name: "Twoje imię:"
+        email: "Twój adres e-mail:"
         subject: "Temat wiadomości:"
         message: "Treść wiadomości:"
     placeholder:
-        name: "Imię"
-        email: "Adres e-mail"
-        subject: "Temat"
-        message: "Treść"
+        name: "Twoje imię:"
+        email: "Twój adres e-mail:"
+        subject: "Temat:"
+        message: "Treść:"
     flash:
         sent: "Wiadomość została wysłana."
+    submit: "Wyślij wiadomość"

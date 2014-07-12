@@ -55,3 +55,11 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+    
+mopa_bootstrap:
+    form:
+        show_legend: false
+        show_child_legend: false
+    icons:
+        # Icon set to use: ['glyphicons','fontawesome','fontawesome4']
+        icon_set:             fontawesome4

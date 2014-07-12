@@ -8,16 +8,20 @@ use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
-class ContactType extends AbstractType
-{
-    public function buildForm(FormBuilderInterface $builder, array $options)
-    {
+class ContactType extends AbstractType {
+
+    public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
                 ->add('name', 'text', array(
-                    'label'       => 'contact.label.name',
-                    'attr'        => array(
+//                    'label'       => 'contact.label.name',
+                    'label' => false,
+                    'horizontal_input_wrapper_class' => 'col-sm-12',
+                    'widget_addon_prepend' => array(
+                        'icon' => 'user'
+                    ),
+                    'attr' => array(
                         'placeholder' => 'contact.placeholder.name',
-                        'pattern'     => '.{2,}' //minlength
+                        'pattern' => '.{2,}' //minlength
                     ),
                     'constraints' => array(
                         new NotBlank(array('message' => 'contact.name.not_blank')),
@@ -25,8 +29,13 @@ class ContactType extends AbstractType
                     )
                 ))
                 ->add('email', 'email', array(
-                    'label'       => 'contact.label.email',
-                    'attr'        => array(
+//                    'label'       => 'contact.label.email',
+                    'label' => false,
+                    'horizontal_input_wrapper_class' => 'col-sm-12',
+                    'widget_addon_prepend' => array(
+                        'icon' => 'envelope'
+                    ),
+                    'attr' => array(
                         'placeholder' => 'contact.placeholder.email',
                     ),
                     'constraints' => array(
@@ -35,10 +44,15 @@ class ContactType extends AbstractType
                     )
                 ))
                 ->add('subject', 'text', array(
-                    'label'       => 'contact.label.subject',
-                    'attr'        => array(
+//                    'label'       => 'contact.label.subject',
+                    'label' => false,
+                    'horizontal_input_wrapper_class' => 'col-sm-12',
+                    'widget_addon_prepend' => array(
+                        'icon' => 'edit'
+                    ),
+                    'attr' => array(
                         'placeholder' => 'contact.placeholder.subject',
-                        'pattern'     => '.{3,}' //minlength
+                        'pattern' => '.{3,}' //minlength
                     ),
                     'constraints' => array(
                         new NotBlank(array('message' => 'contact.subject.not_blank')),
@@ -46,10 +60,12 @@ class ContactType extends AbstractType
                     )
                 ))
                 ->add('message', 'textarea', array(
-                    'label'       => 'contact.label.message',
-                    'attr'        => array(
-                        'cols'        => 50,
-                        'rows'        => 10,
+//                    'label'       => 'contact.label.message',
+                    'label' => false,
+                    'horizontal_input_wrapper_class' => 'col-sm-12',
+                    'attr' => array(
+                        'cols' => 40,
+                        'rows' => 10,
                         'placeholder' => 'contact.placeholder.message'
                     ),
                     'constraints' => array(
@@ -58,8 +74,9 @@ class ContactType extends AbstractType
                     )
         ));
     }
-    public function getName()
-    {
+
+    public function getName() {
         return 'contact';
     }
+
 }

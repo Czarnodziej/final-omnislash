@@ -139,7 +139,7 @@ body {
 
 .services {
   background: #7fbbda;
-  padding: 50px 0;
+  padding: 40px 0;
   color: #ffffff;
 }
 
@@ -185,20 +185,29 @@ i.service-icon {
 
 .img-portfolio {
   margin: 0 auto;
+  width: 250px
+}
+
+.git-logo {
 }
 
 
-/* Call to Action */
+/* LastFM */
 
-.call-to-action {
+.lastfm {
   color: #ffffff;
   background: #0a5175;
   padding: 50px 0;
 }
 
-.call-to-action .btn {
-  margin: 10px;
+.lastfm-top-tracks li a {
+    color: white;
+    
 }
+
+/*.lastfm-top-tracks ol{
+    margin: 10px
+}*/
 
 /* Map */
 
@@ -210,7 +219,11 @@ i.service-icon {
 
 footer {
   padding: 100px 0;
+  background: rgba(181, 209, 237, 1);
+  padding: 20px 0;
+  /*color: #FFFFFF;*/
 }
+
 
 .top-scroll {
   margin-top: 50px;
