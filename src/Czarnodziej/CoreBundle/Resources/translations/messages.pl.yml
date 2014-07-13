@@ -33,7 +33,9 @@ technology:
 lastfm:
     favs:
         title: "Ulubione utwory z ostatnich 7 dni"
-        
+    error1: "Brak połączenia z LastFM:("
+    error2: "Spróbuj odświeżyć stronę."
+    
 contact:
     title: "Formularz kontaktowy"
         
@@ -50,6 +52,9 @@ contact:
     flash:
         sent: "Wiadomość została wysłana."
     submit: "Wyślij wiadomość"
+
+lastmod:
+    content: "Data ostatniej modyfikacji strony:"
     
 sidebar:
     home: "Dom"

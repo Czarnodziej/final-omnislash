@@ -2492,12 +2492,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "c3ae289f4a9e5fc14e489e3914d150954469f1ac"
+                "reference": "2c540b7e330eb2e8ecedfd7d62fb603f96ee39db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/c3ae289f4a9e5fc14e489e3914d150954469f1ac",
-                "reference": "c3ae289f4a9e5fc14e489e3914d150954469f1ac",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/2c540b7e330eb2e8ecedfd7d62fb603f96ee39db",
+                "reference": "2c540b7e330eb2e8ecedfd7d62fb603f96ee39db",
                 "shasum": ""
             },
             "replace": {
@@ -2535,7 +2535,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-07-10 23:58:18"
+            "time": "2014-07-13 07:08:25"
         },
         {
             "name": "twbs/bootstrap-sass",

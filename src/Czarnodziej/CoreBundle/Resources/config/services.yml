@@ -2,6 +2,7 @@ parameters:
 #    czarnodziej_core.example.class: Czarnodziej\CoreBundle\Example
 
 services:
-#    czarnodziej_core.example:
-#        class: %czarnodziej_core.example.class%
+    date_mod:
+        class: Czarnodziej\CoreBundle\Dates\DateMod
+#        name: date_mod
 #        arguments: [@service_id, "plain_value", %parameter%]

@@ -18,7 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Czarnodziej\CoreBundle\CzarnodziejCoreBundle(),
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
-            new Sensio\Bundle\BuzzBundle\SensioBuzzBundle(),
+//            new Sensio\Bundle\BuzzBundle\SensioBuzzBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

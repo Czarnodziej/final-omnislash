@@ -5,24 +5,41 @@ namespace Czarnodziej\CoreBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Czarnodziej\CoreBundle\Form\Type\ContactType;
 use Symfony\Component\HttpFoundation\Request;
+//use Buzz\Exception\ClientException;
 
 //use Symfony\Component\Serializer\Serializer;
 //use Sensio\Bundle\Buzz\Browser;
 
-class DefaultController extends Controller
-{
-    public function indexAction(Request $request)
-    {
+class DefaultController extends Controller {
 
-        $buzz = $this->container->get('buzz');
+    public function indexAction(Request $request) {
+        $locale = $this->getRequest()->getLocale();
+        $date_mod = $this->container->get('date_mod');
+        $last_mod = $date_mod->getPageModTime();
 
-        $response = $buzz->get('http://ws.audioscrobbler.com/2.0/?method='
-                . 'user.gettoptracks&user=pagodemc&'
-                . 'api_key=21f90626f951daad7849a2c2dd3607d4&'
-                . 'period=7day&limit=5&format=json');
+        if ($locale == 'pl') {
+            $date = $date_mod->dateMod("j f Y", $last_mod);
+        } else {
+            $date = date("j F Y", $last_mod);
+        }
 
-        $tracks = json_decode($response->getContent());
+        $ctx = stream_context_create(
+                array(
+                    'http' => array(
+                        'timeout' => 1
+                    )
+                )
+        );
+$url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=pagodemc&'
+                        . 'api_key=21f90626f951daad7849a2c2dd3607d4&'
+                        . 'period=7day&limit=5&format=json';
+        $response = @file_get_contents($url, 0, $ctx); //@ bypassess warnings
 
+        if ($response !== false) {
+            $tracks = json_decode($response);
+        } else {
+            $tracks = null;
+        }
 
         $form = $this->createForm(new ContactType());
         if ($request->isMethod('POST')) {
@@ -30,19 +47,19 @@ class DefaultController extends Controller
 
             if ($form->isValid()) {
                 $message = \Swift_Message::newInstance()
-                    ->setSubject($form->get('subject')->getData())
-                    ->setFrom('kontakt@insanet.pl')
-                    ->setTo('pagodemc@gmail.com')
-                    ->setBody(
+                        ->setSubject($form->get('subject')->getData())
+                        ->setFrom('kontakt@insanet.pl')
+                        ->setTo('pagodemc@gmail.com')
+                        ->setBody(
                         $this->renderView(
-                            'CzarnodziejCoreBundle:Mail:contact.html.twig', array(
-                                'ip' => $request->getClientIp(),
-                                'name' => $form->get('name')->getData(),
-                                'email' => $form->get('email')->getData(),
-                                'message' => $form->get('message')->getData()
-                            )
+                                'CzarnodziejCoreBundle:Mail:contact.html.twig', array(
+                            'ip' => $request->getClientIp(),
+                            'name' => $form->get('name')->getData(),
+                            'email' => $form->get('email')->getData(),
+                            'message' => $form->get('message')->getData()
+                                )
                         )
-                    );
+                );
 
                 $this->get('mailer')->send($message);
 
@@ -53,9 +70,12 @@ class DefaultController extends Controller
         }
 
         return
-            $this->render('CzarnodziejCoreBundle:Default:index.html.twig', array(
+                $this->render('CzarnodziejCoreBundle:Default:index.html.twig', array(
                     'form' => $form->createView(),
-                    'tracks' => $tracks)
-            );
+                    'tracks' => $tracks,
+                    'date' => $date,
+                        )
+        );
     }
+
 }
