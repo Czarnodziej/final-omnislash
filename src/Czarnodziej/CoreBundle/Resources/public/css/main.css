@@ -211,11 +211,26 @@ i.skills-icon {
     color: #ffffff;
     background: #0a5175;
     padding: 50px 0;
+
+}
+
+.lastfm-top-tracks {
+    margin: 0 auto;
+    width: 300px
 }
 
 .lastfm-top-tracks li a {
     color: white;
 }
+
+/* Contact Form */
+
+.contact-form {
+    margin: 0 auto;
+    width: 400px 
+}
+
+
 /* Footer */
 
 footer {
@@ -259,5 +274,16 @@ i.scroll:hover {
     .img-portfolio {
         width: auto
     }
+
+}
+
+@media (max-width: 400px) { 
+
+.contact-form,
+.lastfm-top-tracks
+{
+    /*margin: 0 auto;*/
+    width: 100% 
+}
 
 }
