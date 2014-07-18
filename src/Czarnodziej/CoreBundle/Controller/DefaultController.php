@@ -5,10 +5,6 @@ namespace Czarnodziej\CoreBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Czarnodziej\CoreBundle\Form\Type\ContactType;
 use Symfony\Component\HttpFoundation\Request;
-//use Buzz\Exception\ClientException;
-
-//use Symfony\Component\Serializer\Serializer;
-//use Sensio\Bundle\Buzz\Browser;
 
 class DefaultController extends Controller {
 
@@ -22,19 +18,10 @@ class DefaultController extends Controller {
         } else {
             $date = date("j F Y", $last_mod);
         }
-
-        $ctx = stream_context_create(
-                array(
-                    'http' => array(
-                        'timeout' => 1
-                    )
-                )
-        );
-$url = 'http://ws.audioscrobbler.com/2.0/?method=user.gettoptracks&user=pagodemc&'
-                        . 'api_key=21f90626f951daad7849a2c2dd3607d4&'
-                        . 'period=7day&limit=5&format=json';
-        $response = @file_get_contents($url, 0, $ctx); //@ bypassess warnings
-
+     
+        $lastfm_json = $this->get('kernel')->getRootDir().'/../src/Czarnodziej/CoreBundle/Lastfm/lastfm.json'; //get json from cron job api call
+        $response = @file_get_contents($lastfm_json, FILE_USE_INCLUDE_PATH);
+        
         if ($response !== false) {
             $tracks = json_decode($response);
         } else {

@@ -33,7 +33,7 @@ technology:
 lastfm:
     favs:
         title: "Ulubione utwory z ostatnich 7 dni"
-    error1: "Brak połączenia z LastFM:("
+    error1: "Błąd pobierania wyników z LastFM:("
     error2: "Spróbuj odświeżyć stronę."
     
 contact:

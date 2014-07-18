@@ -1308,12 +1308,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "532a4ad323be54da77179022474e873d307e524c"
+                "reference": "ca591b2fd7021c2608c22cfe5ad54eec66c1acee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/532a4ad323be54da77179022474e873d307e524c",
-                "reference": "532a4ad323be54da77179022474e873d307e524c",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/ca591b2fd7021c2608c22cfe5ad54eec66c1acee",
+                "reference": "ca591b2fd7021c2608c22cfe5ad54eec66c1acee",
                 "shasum": ""
             },
             "require": {
@@ -1364,7 +1364,7 @@
                 "menu",
                 "tree"
             ],
-            "time": "2014-06-20 09:37:12"
+            "time": "2014-07-18 10:01:56"
         },
         {
             "name": "knplabs/knp-menu-bundle",
@@ -2492,12 +2492,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "dd22f599998cc07c18b6643a856d5acda6c5c122"
+                "reference": "866ffc4f37def3d505a10a161720dc0ef9420dea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/dd22f599998cc07c18b6643a856d5acda6c5c122",
-                "reference": "dd22f599998cc07c18b6643a856d5acda6c5c122",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/866ffc4f37def3d505a10a161720dc0ef9420dea",
+                "reference": "866ffc4f37def3d505a10a161720dc0ef9420dea",
                 "shasum": ""
             },
             "replace": {
@@ -2535,7 +2535,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-07-15 18:09:50"
+            "time": "2014-07-17 17:07:28"
         },
         {
             "name": "twbs/bootstrap-sass",
