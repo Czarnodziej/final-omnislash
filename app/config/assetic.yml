@@ -21,7 +21,6 @@ assetic:
         jpegoptim:
             bin: /usr/bin/jpegoptim
             strip_all: true
-            max: 50
         optipng:
             bin: /usr/bin/optipng
 
