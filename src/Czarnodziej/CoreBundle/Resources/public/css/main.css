@@ -216,8 +216,9 @@ i.skills-icon {
 }
 
 .lastfm-top-tracks {
-    margin: 0 auto;
-    width: 400px
+    width: 400px;
+    position: relative;
+    left: -25px;
 }
 
 .lastfm-top-tracks h4 {
