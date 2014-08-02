@@ -201,35 +201,15 @@
                         {% if tracks %}
                             <h4>{{'lastfm.favs.title'|trans}}:</h4>
                             <ol>
-                                <li>
-                                    <a href="{{tracks.toptracks.track[0].url}}">
-                                        <img src="{{ attribute(tracks.toptracks.track[0].image[0], '#text')}}" >
-                                        {{tracks.toptracks.track[0].artist.name}} - {{tracks.toptracks.track[0].name}}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{tracks.toptracks.track[1].url}}">
-                                        <img src="{{ attribute(tracks.toptracks.track[1].image[0], '#text')}}" >
-                                        {{tracks.toptracks.track[1].artist.name}} - {{tracks.toptracks.track[1].name}}</a>
-                                </li>
-                                <li>
-                                    <a href="{{tracks.toptracks.track[2].url}}">
-                                        <img src="{{ attribute(tracks.toptracks.track[2].image[0], '#text')}}" >
-                                        {{tracks.toptracks.track[2].artist.name}} - {{tracks.toptracks.track[2].name}}</a>
-                                </li>
-
-                                <li>
-                                    <a href="{{tracks.toptracks.track[3].url}}">
-                                        <img src="{{ attribute(tracks.toptracks.track[3].image[0], '#text')}}" >
-                                        {{tracks.toptracks.track[3].artist.name}} - {{tracks.toptracks.track[3].name}}</a>
-                                </li>
-
-                                <li>
-                                    <a href="{{tracks.toptracks.track[4].url}}">
-                                        <img src="{{ attribute(tracks.toptracks.track[4].image[0], '#text')}}" >
-                                        {{tracks.toptracks.track[4].artist.name}} - {{tracks.toptracks.track[4].name}}</a>                                                                 </li>
-                            </ol>
-
+                                {% for track in tracks.toptracks.track %}
+                                    <li>
+                                        <a href="{{track.url}}">
+                                            {#<img src="{{ attribute(track.image[0], '#text')}}" >#}
+                                            {{track.artist.name}} - {{track.name}}
+                                        </a>
+                                    </li>
+                                {% endfor %}                         
+ 			    </ol>
                         {% else %} 
                             <p>{{'lastfm.error1'|trans}}</p>
                             <p>{{'lastfm.error2'|trans}}</p>
