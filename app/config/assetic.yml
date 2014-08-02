@@ -14,10 +14,10 @@ assetic:
         #    jar: "%kernel.root_dir%/Resources/java/yuicompressor-2.4.7.jar"
         uglifyjs:
             #change according to NODE.js/NPM config
-            bin: /home/marcin/npm/lib/node_modules/uglify-js/bin/uglifyjs
+            bin: /usr/local/bin/uglifyjs
         uglifycss:
             #change according to NODE.js/NPM config
-            bin: /home/marcin/npm/lib/node_modules/uglifycss/uglifycss
+            bin: /usr/local/bin/uglifycss
         jpegoptim:
             bin: /usr/bin/jpegoptim
             strip_all: true
