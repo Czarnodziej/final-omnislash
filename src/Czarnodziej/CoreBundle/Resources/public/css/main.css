@@ -221,12 +221,12 @@ i.skills-icon {
     left: -25px;
 }
 
-.lastfm-top-tracks h4 {
-    text-align: center;
+.lastfm-top-tracks a{
+    color: white;
 }
 
-.lastfm-top-tracks li a {
-    color: white;
+.lastfm-top-tracks h4 {
+    text-align: center;
 }
 
 /* Contact Form */
@@ -290,11 +290,11 @@ i.scroll:hover {
 
 @media (max-width: 400px) { 
 
-.contact-form,
-.lastfm-top-tracks
-{
-    /*margin: 0 auto;*/
-    width: 100% 
-}
+    .contact-form,
+    .lastfm-top-tracks
+    {
+        /*margin: 0 auto;*/
+        width: 100% 
+    }
 
 }

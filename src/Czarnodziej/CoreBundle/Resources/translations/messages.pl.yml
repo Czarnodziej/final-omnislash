@@ -18,7 +18,7 @@ skills:
         description: "Responsywność bootstrapowa jak i customowa. Czysto i przejrzyście."
     backend:
         title: "Backend"
-        description: "Dominują Symfoniczne arie, bogato doprawione precyzyjnie dobranymi bundlami, odpowiednio do zamierzeń autora."
+        description: "Dominują Symfoniczne arie i Doctrine'owe manipulacje, bogato doprawione precyzyjnie dobranymi bundlami, odpowiednio do zamierzeń autora."
     admin:
         title: "Administracja"
         description: "LAMPowo Debianowa, bezpiecznie backupowa, zdrowo doprawiona SSH, rsync'iem, tail'em, grep'em oraz szczyptą vim'a i jaśnie czarną magią. Wielce terminalove ekscesy."
