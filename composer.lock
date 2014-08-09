@@ -1099,12 +1099,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "1fe261de17abde29d6d461b7a93873d48b0efce7"
+                "reference": "27a84cec3ea4daa32cd6fe308c0847ca9644f588"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/1fe261de17abde29d6d461b7a93873d48b0efce7",
-                "reference": "1fe261de17abde29d6d461b7a93873d48b0efce7",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/27a84cec3ea4daa32cd6fe308c0847ca9644f588",
+                "reference": "27a84cec3ea4daa32cd6fe308c0847ca9644f588",
                 "shasum": ""
             },
             "require": {
@@ -1158,7 +1158,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2014-08-01 02:49:19"
+            "time": "2014-08-04 23:04:17"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1307,12 +1307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenu.git",
-                "reference": "5758d0026d7ed00c8dd4727e413918cf2dc74c1a"
+                "reference": "4718be3b639d30d3ac1e4292bd7232faccceb962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/5758d0026d7ed00c8dd4727e413918cf2dc74c1a",
-                "reference": "5758d0026d7ed00c8dd4727e413918cf2dc74c1a",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/4718be3b639d30d3ac1e4292bd7232faccceb962",
+                "reference": "4718be3b639d30d3ac1e4292bd7232faccceb962",
                 "shasum": ""
             },
             "require": {
@@ -1349,7 +1349,7 @@
                     "email": "stof@notk.org"
                 },
                 {
-                    "name": "Knplabs",
+                    "name": "KnpLabs",
                     "homepage": "http://knplabs.com"
                 },
                 {
@@ -1363,7 +1363,7 @@
                 "menu",
                 "tree"
             ],
-            "time": "2014-08-01 09:50:16"
+            "time": "2014-08-08 15:32:27"
         },
         {
             "name": "knplabs/knp-menu-bundle",
@@ -1613,12 +1613,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phiamo/MopaBootstrapBundle.git",
-                "reference": "9860ea78d9c0a302523c430d14a03eeb3c71f951"
+                "reference": "61bf1357bfb36b44da99850e04849ead3d947b3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/9860ea78d9c0a302523c430d14a03eeb3c71f951",
-                "reference": "9860ea78d9c0a302523c430d14a03eeb3c71f951",
+                "url": "https://api.github.com/repos/phiamo/MopaBootstrapBundle/zipball/61bf1357bfb36b44da99850e04849ead3d947b3e",
+                "reference": "61bf1357bfb36b44da99850e04849ead3d947b3e",
                 "shasum": ""
             },
             "require": {
@@ -1653,13 +1653,12 @@
             ],
             "authors": [
                 {
-                    "name": "Philipp A. Mohrenweiser",
-                    "email": "phiamo@googlemail.com",
-                    "homepage": "http://bootstrap.mohrenweiserpartner.de"
-                },
-                {
                     "name": "Community contributions",
                     "homepage": "https://github.com/phiamo/MopaBootstrapBundle/contributors"
+                },
+                {
+                    "name": "Philipp A. Mohrenweiser",
+                    "email": "phiamo@googlemail.com"
                 }
             ],
             "description": "Easy integration of twitters bootstrap into symfony2",
@@ -1670,7 +1669,7 @@
                 "form",
                 "template"
             ],
-            "time": "2014-07-10 11:37:58"
+            "time": "2014-08-08 15:31:33"
         },
         {
             "name": "mopa/composer-bridge",
@@ -1922,29 +1921,25 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v3.0.2",
+            "version": "v3.0.4",
             "target-dir": "Sensio/Bundle/DistributionBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "67b34359f91c25ad36b960f66a287df0615d7c54"
+                "reference": "df82b1ee2b833be97677c0b95fca27e68fd4a344"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/67b34359f91c25ad36b960f66a287df0615d7c54",
-                "reference": "67b34359f91c25ad36b960f66a287df0615d7c54",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/df82b1ee2b833be97677c0b95fca27e68fd4a344",
+                "reference": "df82b1ee2b833be97677c0b95fca27e68fd4a344",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
+                "sensiolabs/security-checker": "~2.0",
                 "symfony/class-loader": "~2.2",
-                "symfony/config": "~2.2",
-                "symfony/dependency-injection": "~2.2",
-                "symfony/filesystem": "~2.2",
                 "symfony/form": "~2.2",
-                "symfony/framework-bundle": "~2.2",
-                "symfony/http-foundation": "~2.2",
-                "symfony/http-kernel": "~2.2",
+                "symfony/framework-bundle": "~2.4",
                 "symfony/process": "~2.2",
                 "symfony/validator": "~2.2",
                 "symfony/yaml": "~2.2"
@@ -1967,17 +1962,15 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "email": "fabien@symfony.com"
                 }
             ],
-            "description": "The base bundle for the Symfony Distributions",
+            "description": "Base bundle for Symfony Distributions",
             "keywords": [
                 "configuration",
                 "distribution"
             ],
-            "time": "2014-07-16 07:46:27"
+            "time": "2014-08-06 09:24:35"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -2035,6 +2028,51 @@
                 "controllers"
             ],
             "time": "2014-05-22 23:27:44"
+        },
+        {
+            "name": "sensiolabs/security-checker",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sensiolabs/security-checker.git",
+                "reference": "5b4eb4743ebe68276c911c84101ecdf4a9ae76ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/5b4eb4743ebe68276c911c84101ecdf4a9ae76ee",
+                "reference": "5b4eb4743ebe68276c911c84101ecdf4a9ae76ee",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "symfony/console": "~2.0"
+            },
+            "bin": [
+                "security-checker"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "SensioLabs\\Security": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien.potencier@gmail.com"
+                }
+            ],
+            "description": "A security checker for your composer.lock",
+            "time": "2014-07-19 10:52:35"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2268,12 +2306,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Serializer.git",
-                "reference": "a97d7518e105b8944745b0744953f6f15f52b2e2"
+                "reference": "0ce70f55cdabe00a7c5b3ff0e95ab9915bf747ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Serializer/zipball/a97d7518e105b8944745b0744953f6f15f52b2e2",
-                "reference": "a97d7518e105b8944745b0744953f6f15f52b2e2",
+                "url": "https://api.github.com/repos/symfony/Serializer/zipball/0ce70f55cdabe00a7c5b3ff0e95ab9915bf747ca",
+                "reference": "0ce70f55cdabe00a7c5b3ff0e95ab9915bf747ca",
                 "shasum": ""
             },
             "require": {
@@ -2306,7 +2344,7 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "http://symfony.com",
-            "time": "2014-07-12 09:14:57"
+            "time": "2014-08-05 09:07:51"
         },
         {
             "name": "symfony/swiftmailer-bundle",
@@ -2367,16 +2405,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.5.2",
+            "version": "v2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "e66ee967571b89234c90946fe0d50dad195ad29c"
+                "reference": "f077a238c781f845487a7c81fea8033ccd0e6a02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/e66ee967571b89234c90946fe0d50dad195ad29c",
-                "reference": "e66ee967571b89234c90946fe0d50dad195ad29c",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/f077a238c781f845487a7c81fea8033ccd0e6a02",
+                "reference": "f077a238c781f845487a7c81fea8033ccd0e6a02",
                 "shasum": ""
             },
             "require": {
@@ -2464,14 +2502,12 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "The Symfony PHP framework",
@@ -2479,7 +2515,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-07-15 15:39:46"
+            "time": "2014-08-06 07:03:01"
         },
         {
             "name": "twbs/bootstrap",
@@ -2487,12 +2523,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twbs/bootstrap.git",
-                "reference": "557d3e527cbbff5994b5ec48e11ec318aac4a776"
+                "reference": "a8437f0d2357368556368cbde1afecda4f0117f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/557d3e527cbbff5994b5ec48e11ec318aac4a776",
-                "reference": "557d3e527cbbff5994b5ec48e11ec318aac4a776",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/a8437f0d2357368556368cbde1afecda4f0117f3",
+                "reference": "a8437f0d2357368556368cbde1afecda4f0117f3",
                 "shasum": ""
             },
             "replace": {
@@ -2530,7 +2566,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2014-08-01 22:04:55"
+            "time": "2014-08-08 19:23:55"
         },
         {
             "name": "twbs/bootstrap-sass",
@@ -2796,9 +2832,7 @@
             "time": "2014-04-28 14:01:06"
         }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "symfony/serializer": 20,
@@ -2819,7 +2853,5 @@
     "platform": {
         "php": ">=5.3.3"
     },
-    "platform-dev": [
-
-    ]
+    "platform-dev": []
 }
