@@ -17,7 +17,6 @@
             'bundles/czarnodziejcore/css/*'%}
             <link rel="stylesheet" href="{{ asset_url }}"/>
             {% endstylesheets %}
-            <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         {% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     <body>
@@ -30,6 +29,12 @@
         %}
         <script src="{{ asset_url }}"></script>
         {% endjavascripts %}
+        <script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: { families: [ 'Open+Sans:400,600:latin-ext' ] }
+            });
+        </script>
         <!-- Piwik -->
         <script type="text/javascript">
             var _paq = _paq || [];
@@ -43,7 +48,7 @@
                 g.type = 'text/javascript';
                 g.defer = true;
                 g.async = true;
-                g.src = u + 'piwik.js';
+                g.src = u + '/js/';
                 s.parentNode.insertBefore(g, s);
             })();
         </script>
