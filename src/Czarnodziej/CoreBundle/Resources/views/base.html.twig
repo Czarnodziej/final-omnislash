@@ -11,13 +11,6 @@
               portfolio, php, symfony2, bootstrap, jquery, javascript, js, css"/>
         <meta name="author" content="">
         {% block stylesheets %}
-            {#{% stylesheets filter='?uglifycss, cssrewrite'#}
-            {#'@bootstrap_css'#}
-            {#'@fontawesome_css'#}
-            {#'bundles/czarnodziejcore/css/*'%}#}
-            {#<link rel="stylesheet" href="{{ asset_url }}"/>#}
-            {#{% endstylesheets %}#}
-
             {% include '@CzarnodziejCore/inline_style.html.twig' %}
         {% endblock %}
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
